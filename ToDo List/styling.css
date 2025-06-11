@@ -1,0 +1,106 @@
+/* Page Background */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #423b9b, #ca2d2d);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 500px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 9px 70px rgb(250, 138, 64);
+  }
+  
+  /* Input Styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    border: 1px solid #fa3737;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+  }
+  input[type="text"]:focus {
+    border-color: #71aae8;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #9f7ac9;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  button:hover {
+    background-color: #003d7e;
+    color: #ffffff;
+  }
+  
+  /* Task List with Animation */
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.4s ease forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #ffffff;
+    margin-bottom: 8px;
+    border-left: 4px solid #7a9bcc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  li:hover {
+    background-color: #95c7ff;
+  }
+  .completed {
+    text-decoration: line-through;
+    color: #999;
+    opacity: 0.7;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Delete animation */
+  .fade-out {
+    animation: fadeOut 0.3s forwards;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+  }
